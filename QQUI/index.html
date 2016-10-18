@@ -18,6 +18,14 @@
 				-webkit-animation: none !important;
 				animation: none !important;
 			}
+			#info-panel{
+				background-color: #FFFFFF;
+			}
+			#self-info img{
+				width: 3rem;
+				height: 3rem;
+				border-radius: 50%;
+			}
 		</style>
 	</head>
 	<body>
@@ -26,7 +34,7 @@
 			<div class="page page-current" id="msg-page">
 				<!--导航栏-->
 				<header class="bar bar-nav">
-					<a class="icon icon-me pull-left"></a>
+					<a class="icon icon-me pull-left open-panel" data-panel="#info-panel"></a>
 					<button class="button button-link button-nav pull-right"><b>＋</b></button>
 					<div id="btn-title" class="buttons-row">
 						<a class="tab-link button active">消息</a>
@@ -49,7 +57,7 @@
 					</a>
 				</nav>
 				<!--内容区-->
-				<div class="content">
+				<div class="content close-panel">
 					<div class="content-block">
 						Happy Birthday To You !
 					</div>
@@ -59,7 +67,7 @@
 			<div class="page" id="ab-page"> 
 				<!--导航栏-->
 				<header class="bar bar-nav">
-					<a class="icon icon-me pull-left"></a>
+					<a class="icon icon-me pull-left open-panel" data-panel="#info-panel"></a>
 					<button class="button button-link button-nav pull-right">添加</button>
 					<h1 class="title">联系人</h1>	
 				</header>
@@ -79,7 +87,7 @@
 					</a>
 				</nav>
 				<!--内容区-->
-				<div class="content">
+				<div class="content close-panel">
 					<div class="content-block">
 						这里是联系人 
 					</div>
@@ -89,7 +97,7 @@
 			<div class="page" id="st-page"> 
 				<!--导航栏-->
 				<header class="bar bar-nav">
-					<a class="icon icon-me pull-left"></a>
+					<a class="icon icon-me pull-left open-panel" data-panel="#info-panel"></a>
 					<button class="button button-link button-nav pull-right">更多</button>
 					<h1 class="title">动态</h1>	
 				</header>
@@ -109,16 +117,18 @@
 					</a>
 				</nav>
 				<!--内容区-->
-				<div class="content">
+				<div class="content close-panel">
 					<div class="content-block">
 						动态！！！！
 					</div>
 				</div>
 			</div>
-			
-			<div class="panel panel-left" id="info-panel">
+			<!--侧边栏-->
+			<div class="panel panel-left panel-reveal" id="info-panel">
 				<div class="content-block">
-					<p>这是侧边栏</p>
+					<div id="self-info">
+						<img src="img/1.jpg"/>
+					</div>
 				</div>
 			</div>
 		</div>
